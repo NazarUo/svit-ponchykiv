@@ -1,1 +1,116 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f8f8;
+}
+
+/* Увеличенная кнопка */
+.start-button {
+    padding: 15px 30px;
+    font-size: 22px;
+    font-weight: 700;
+    border: none;
+    border-radius: 12px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Анимация кнопки */
+.start-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+.start-button:active {
+    transform: scale(1.05);
+}
+
+.timer {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.question {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.question, .answers, .timer {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.answers {
+    display: flex;
+    gap: 10px;
+}
+
+.answer {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #000;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    background-color: #fff;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Анимация ответов */
+.answer:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.1);
+}
+
+/* Цвета при правильном и неправильном ответе */
+.correct {
+    background-color: #00FF00 !important;
+}
+
+.wrong {
+    background-color: #FF0000 !important;
+}
+
+.stats-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.correct-stats {
+    color: #28a745;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.wrong-stats {
+    color: #dc3545;
+    font-size: 24px;
+    font-weight: 700;
+}
 
